@@ -11,5 +11,7 @@ public class WizardTest {
 
         Wizard wizard = new Wizard(10,10,10,10,mocklibrary);
         assertEquals("Casting Fireball", wizard.castRandomSpell());
+        verify(mocklibrary, times(1)).getRandomSpell();
+
     }
 }
